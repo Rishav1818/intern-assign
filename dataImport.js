@@ -7,10 +7,7 @@ axios.defaults.headers.common['Cache-Control'] = 'no-cache';
 axios.defaults.headers.common['Pragma'] = 'no-cache';
 axios.defaults.headers.common['Expires'] = '0';
 
-// let githubRepository = 'Rishav1818/testing';
-// let githubFileName = 'abc.json';
-
-// const mongoURI = 'mongodb+srv://rishavchamp18:Give_permission@cluster0.y1nkixn.mongodb.net/?retryWrites=true&w=majority';
+// Get GitHub repository and file name from environment variables
 let githubRepository = process.env.GITHUB_REPOSITORY;
 let githubFileName = process.env.GITHUB_FILE_NAME;
 const mongoURI = process.env.MONGO_URI;
