@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 const mongoose = require('mongoose');
 
@@ -6,10 +7,14 @@ axios.defaults.headers.common['Cache-Control'] = 'no-cache';
 axios.defaults.headers.common['Pragma'] = 'no-cache';
 axios.defaults.headers.common['Expires'] = '0';
 
-let githubRepository = 'Rishav1818/testing';
-let githubFileName = 'abc.json';
+// let githubRepository = 'Rishav1818/testing';
+// let githubFileName = 'abc.json';
 
-const mongoURI = 'mongodb+srv://rishavchamp18:Give_permission@cluster0.y1nkixn.mongodb.net/?retryWrites=true&w=majority';
+// const mongoURI = 'mongodb+srv://rishavchamp18:Give_permission@cluster0.y1nkixn.mongodb.net/?retryWrites=true&w=majority';
+let githubRepository = process.env.GITHUB_REPOSITORY;
+let githubFileName = process.env.GITHUB_FILE_NAME;
+const mongoURI = process.env.MONGO_URI;
+
 
 
 // MongoDB connection
