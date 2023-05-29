@@ -1,8 +1,4 @@
 # intern-assign
-Certainly! Here's an example of what the README.md file could look like for your app:
-
-```markdown
-# My App
 
 This application fetches data from a GitHub repository and stores it in a MongoDB database. It is designed to periodically update the data based on a configured interval.
 
@@ -34,18 +30,22 @@ To run the application, follow the steps below.
 1. Set up your MongoDB database:
    - Create a MongoDB Atlas account and set up a new cluster.
    - Obtain the MongoDB connection URI, which should look similar to the `mongoURI` variable in the code.
-   - Update the `mongoURI` variable in the code (`index.js`) with your MongoDB connection URI.
+   - Update the `mongoURI` variable in the code (`dataImport.js`) with your MongoDB connection URI.
 
 2. Configure the GitHub repository and data file:
-   - Open the `abc.json` file in your GitHub repository (`Rishav1818/testing`).
+   - Open the `abc.json in my case use your own file for testing` file in your GitHub repository (`Rishav1818/testing in my case you can use your own repo for testing`).
    - Make sure the file contains valid JSON data.
-   - If you need to use a different file, update the `githubFileName` variable in the code (`index.js`) with the correct file name.
+   - If you need to use a different file, update the `githubFileName` variable in the code (`dataImport.js`) with the correct file name.
 
 ### Running the Application
 
 1. Start the application:
    ```bash
-   npm start
+   node dataImport.js
+   ```
+   or
+   ```bash
+   nodemon dataImport.js
    ```
 
 2. The application will connect to the MongoDB database, fetch the data from GitHub, store it in the MongoDB collection, and periodically update the data based on the configured interval.
@@ -56,8 +56,4 @@ To run the application, follow the steps below.
 
 - Ensure that you have the necessary permissions and access rights to the GitHub repository and MongoDB cluster.
 - The application fetches the data from GitHub using the GitHub API. Make sure the repository and file are accessible and not restricted.
-- The application uses Axios for HTTP requests, Mongoose for MongoDB connectivity, and csvtojson for parsing CSV data to JSON.
-
-```
-
-Feel free to customize the README.md file as per your requirements and add any additional information or sections that may be relevant to your project.
+- The application uses Axios for HTTP requests, Mongoose for MongoDB connectivity.
