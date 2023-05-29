@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# MongoDB
+.env
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# Logs
+logs/
+
+# Build output
+dist/
+
+# Other
+.DS_Store
